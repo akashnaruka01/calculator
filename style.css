@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right bottom, rgb(62, 57, 57) 5%,rgb(151, 68, 159));
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content{    
+    font-size: 3rem;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+
+.calci{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(50, 53, 53);
+    width: 350px;
+    height: 80vh;
+    margin-top: 10vh;
+    border-radius: 30px;
+    border: 8px white solid;
+}
+
+.display{
+    margin-top: 1rem;
+    /* border: 4px white solid; */
+}
+
+.box{
+    font-size: 1.3rem;
+    padding: 1.5rem ;
+    border-radius: 5px;
+    box-shadow: -1px -1px 0px gray;
+}
+
+.keysection{
+    gap: 5px;
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
+}
+
+.column-2{
+    grid-row: span 2;
+}
+
+/* utility classes */
+
+.button1{
+    color: gray;
+    background-color: rgb(47, 49, 51);
+}
+
+.button2{
+    color: white;
+    background-color: rgb(227, 86, 199);
+}
+
+.button3{
+    color: rgb(216, 114, 196);
+    background-color: rgb(47, 49, 51);
+}
+
+/* media queries */
+@media screen and (max-width : 426px){
+    .container{
+    flex-direction: column;
+    align-items: center;
+    }
+    .content{
+        margin-top: 10px;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width : 375px){
+    .calci{
+        width: 300px;
+    }
+}
+
+@media screen and (max-height : 700px){
+    .box{
+        font-size: 1rem;
+        padding: 1rem ;
+    }
+}
