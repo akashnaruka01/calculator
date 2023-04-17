@@ -5,17 +5,21 @@ let display = document.querySelector('.display');
 
 Array.from(buttons).forEach((button)=>{
     button.addEventListener('click',(event)=>{
+
+        let current_input = event.target.innerHTML ;
         
-        if(event.target.innerHTML === "AC")
+        if(current_input === "÷") string += "/";
+        else if(current_input === "×") string += "*";
+        
+        else if(current_input === "AC")
         {   string = '';
-            display.style.color = "white";            
-            // display.style.textAlign = "start";
+            display.style.color = "white";           
         }
 
-        else if(event.target.innerHTML === '⌫')
+        else if(current_input === '⌫')
             string = string.slice(0,-1);
 
-        else if(event.target.innerHTML === '=')
+        else if(current_input === '=')
         {
             try {
                 string = JSON.stringify(
