@@ -97,6 +97,9 @@ body{
         margin-top: 10px;
         font-size: 2rem;
     }
+    .Button{
+        padding: 1.2rem;
+    }
     .calci{
         width: 300px;
     }
